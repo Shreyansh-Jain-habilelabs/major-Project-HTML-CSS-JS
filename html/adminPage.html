@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Show Page</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/adminPage.css">
+</head>
+<body>
+  
+  <div class="containerBox">
+
+    <div class="navbar">
+      <a href="/html/bookedTicketsPage.html">Show Booked Tickets</a>
+    </div>
+
+    <div class="formHeading">
+      <h2>Add Show</h2>
+    </div>
+
+    <form action="" class="containerForm" onsubmit="createShow(event)">
+
+      <div class="inputBox">
+        <input type="text" id="name">
+        <label for="name">Name</label>
+      </div>
+      
+      <div class="inputBox">
+        <input type="number" id="price">
+        <label for="price">Price</label>
+      </div>
+      
+      <div class="inputBox">
+        <input type="date" id="date">
+        <label for="date">Date</label>
+      </div>
+      
+      <div class="inputBox">
+        <input type="time" id="time">
+        <label for="time">Time</label>
+      </div>
+
+      <div class="inputBox">
+        <input type="text" id="showDiscription">
+        <label for="showDiscription">Show Discription</label>
+      </div>
+
+      <div class="inputBox">
+        <input type="file" name="showImage" id="showImage" accept="image/*">
+        <label for="showImage">Upload Image</label>
+      </div>
+
+      <div class="inputBox">
+        <input type="submit" id="addShow" value="Add Show">
+      </div>
+
+    </form>
+    
+  </div>
+
+  <script src="/js/adminPage.js" defer></script>
+</body>
+</html>

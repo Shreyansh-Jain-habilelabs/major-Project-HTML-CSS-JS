@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body{
+  background-image: url(/assets/img/threater.png);
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.containerBox{
+  min-height: 100vh;
+  background-image: linear-gradient(#5ecde183,#2caee2cb);
+  padding: 10px;
+}
+
+.showCardContainer{
+  display: flex;
+  justify-content: center;
+  margin: 3rem;
+}
+
+.card{
+  margin: 1rem !important;
+}
