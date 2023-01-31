@@ -4,6 +4,13 @@ createShow = (e) =>{
   let showDetails = {};
 
   for (let i = 0; i < e.target.length-1; i++) {
+    // if (e.target[i].type == "file") {
+    //   console.log(e.target[i].files[0]);
+    //   let reader = new FileReader();
+    //   reader.onloadend = function() {
+    //     console.log('RESULT', reader.result);
+    //   };
+    // }
     if (e.target[i].value) {
       showDetails[e.target[i].id] = e.target[i].value;
     }

@@ -20,9 +20,11 @@ body{
 .showCardContainer{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 3rem;
 }
 
 .card{
   margin: 1rem !important;
+  flex: 1 1 200px;
 }
