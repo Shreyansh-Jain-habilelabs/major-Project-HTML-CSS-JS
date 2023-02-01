@@ -38,6 +38,7 @@ createShow = (e) => {
         alert("Time already contais a Show !");
         // location.assign("/html/adminPage.html");
       } else {
+        localStorage.setItem(showDetails.name,"")
         // ----------------------------- Data adding in local storage -----------------------------
         let dataInLocalStorage = localStorage.getItem("showDetails");
         dataInLocalStorage = dataInLocalStorage ? JSON.parse(dataInLocalStorage) : [];

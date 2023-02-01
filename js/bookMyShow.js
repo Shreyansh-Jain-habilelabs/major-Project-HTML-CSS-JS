@@ -11,14 +11,14 @@ bookMyShow = (e, values) => {
 
   // ----------------------------- Validation -----------------------------
   if (
-    "name" in registerUser &&
-    "email" in registerUser &&
-    "phoneNum" in registerUser
+    "name" in userDetails &&
+    "email" in userDetails &&
+    "phoneNumber" in userDetails
   ) {
     if (
-      validateName(registerUser.name) &&
-      validateEmail(registerUser.email) &&
-      validatePhone(registerUser.phoneNum)
+      validateName(userDetails.name) &&
+      validateEmail(userDetails.email) &&
+      validatePhone(userDetails.phoneNumber)
     ) {
       // ----------------------------- Data adding in local storage -----------------------------
       let dataInLocalStorage = localStorage.getItem(bookingShowName.showName);
