@@ -26,7 +26,7 @@ bookMyShow = (e) => {
   }
   
   localStorage.setItem("bookedShowDetails", JSON.stringify(bookedShowDetails));
-
+  
   location.assign("/html/bookMyShow.html");
 };
 

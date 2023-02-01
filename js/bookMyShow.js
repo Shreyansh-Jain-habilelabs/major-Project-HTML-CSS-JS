@@ -8,7 +8,8 @@ bookMyShow = (e, values) => {
   for (let i = 0; i < values.length - 1; i++) {
     userDetails[values[i].id] = values[i].value;
   }
-
+  userDetails["date"] =  bookingShowName.date;
+  userDetails["time"] = bookingShowName.time;
   // ----------------------------- Validation -----------------------------
   if (
     "name" in userDetails &&
