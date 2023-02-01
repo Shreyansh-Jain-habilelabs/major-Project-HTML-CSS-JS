@@ -5,15 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Ticket</title>
+    <link rel="stylesheet" href="/assets/css/bookMyShow.css">
+
   </head>
   <body>
 
+    <div class="containerBox">
 
-    <script>
-      function bookShow(e) {
-        console.log(`yes ${e}`);
-      }
-      bookShow();
-    </script>
+      <div class="navbar">
+        <a href="/index.html">Display Shows</a>
+      </div>
+  
+      <div class="formHeading">
+        <h2>Book Show</h2>
+      </div>
+  
+      <form action="" class="containerForm" onsubmit="bookMyShow(this)">
+  
+        <div class="inputBox">
+          <input type="text" id="name" required>
+          <label for="name">Name</label>
+        </div>
+        
+        <div class="inputBox">
+          <input type="text" id="phoneNumber" required>
+          <label for="phoneNumber">Phone Number</label>
+        </div>
+        
+        <div class="inputBox">
+          <input type="text" id="email" required>
+          <label for="email">Email</label>
+        </div>
+  
+        <div class="inputBox">
+          <input type="submit" id="bookShow" value="Book My Show">
+        </div>
+  
+      </form>
+      
+    </div>
+
+    <script src="/js/bookMyShow.js"></script>
   </body>
 </html>

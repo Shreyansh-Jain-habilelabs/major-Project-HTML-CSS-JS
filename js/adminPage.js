@@ -1,23 +1,25 @@
-createShow = (e) =>{
+createShow = (e) => {
   e.preventDefault();
 
   let showDetails = {};
-
-  for (let i = 0; i < e.target.length-1; i++) {
-    // if (e.target[i].type == "file") {
-    //   console.log(e.target[i].files[0]);
-    //   let reader = new FileReader();
-    //   reader.onloadend = function() {
-    //     console.log('RESULT', reader.result);
-    //   };
-    // }
+  const imgData = {};
+  for (let i = 0; i < e.target.length - 1; i++) {
     if (e.target[i].value) {
+      console.log(`yes = ${e.target[i].value}`);
       showDetails[e.target[i].id] = e.target[i].value;
     }
+    // if (e.target[i].type === "file") {
+    //   console.log(e.target[i]);
+    //   let file = e.target[i].files[0];
+    //   let reader = new FileReader();
+    //   reader.onloadend = () => {
+    //     console.log("RESULT", reader.result);
+    //     imgData[e.target[i].id] = reader.result;
+    //   };
+    //   reader.readAsDataURL(file);
+    // }
   }
-  console.log(showDetails);
 
-  // ----------------------------- Validation -----------------------------
   if (
     "name" in showDetails &&
     "price" in showDetails &&
@@ -31,12 +33,12 @@ createShow = (e) =>{
       validatePrice(showDetails.date) &&
       validateDate(showDetails.date) &&
       validateTime(showDetails.time) &&
-      validateImage(showDetails.showImage) 
+      validateImage(showDetails.showImage)
     ) {
-      if (checkExistingShow(showDetails.time,showDetails.date)) {
+      if (checkExistingShow(showDetails.time, showDetails.date)) {
         alert("Time already contais a Show !");
         // location.assign("/html/adminPage.html");
-      }else{
+      } else {
         // ----------------------------- Data adding in local storage -----------------------------
         let dataInLocalStorage = localStorage.getItem("showDetails");
         dataInLocalStorage = dataInLocalStorage ? JSON.parse(dataInLocalStorage) : [];
@@ -49,7 +51,9 @@ createShow = (e) =>{
   } else {
     alert("No field can be empty!");
   }
-} 
+
+
+};
 
 // ----------------------------- Name Validation -----------------------------
 validateName = (nameEntered) => {
@@ -97,7 +101,7 @@ validateTime = (timeEntered) => {
 
 // ----------------------------- Image Validation -----------------------------
 validateImage = (imageUploaded) => {
-  let extension = imageUploaded.substring(imageUploaded.lastIndexOf('.') + 1).toLowerCase();
+  let extension = imageUploaded.substring(imageUploaded.lastIndexOf(".") + 1).toLowerCase();
   let validRegex = /(jpg)|(jpeg)|(png)/;
 
   if (!extension.match(validRegex)) {
@@ -120,14 +124,14 @@ validateImage = (imageUploaded) => {
 
 // ----------------------------- Check Existing Show Validate -----------------------------
 
-checkExistingShow = (timeEntered,dateEntered) => {
+checkExistingShow = (timeEntered, dateEntered) => {
   if (localStorage.getItem("showDetails")) {
     let arr = Object.values(JSON.parse(localStorage.getItem("showDetails")));
-    for (let i = 0; i < arr.length ; i++) {
+    for (let i = 0; i < arr.length; i++) {
       if (arr[i].time === timeEntered && arr[i].date === dateEntered) {
         return true;
       }
-    } 
+    }
   }
   return false;
 };
