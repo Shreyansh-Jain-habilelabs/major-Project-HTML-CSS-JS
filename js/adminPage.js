@@ -5,7 +5,6 @@ createShow = (e) => {
   const imgData = {};
   for (let i = 0; i < e.target.length - 1; i++) {
     if (e.target[i].value) {
-      console.log(`yes = ${e.target[i].value}`);
       showDetails[e.target[i].id] = e.target[i].value;
     }
     // if (e.target[i].type === "file") {
