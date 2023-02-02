@@ -8,7 +8,7 @@ if (JSON.parse(localStorage.getItem("showDetails"))) {
     $(".list-group-item")[$(".list-group-item").length - 3].innerHTML += arr[i].date;
     $(".list-group-item")[$(".list-group-item").length - 2].innerHTML += arr[i].time;
     $(".list-group-item")[$(".list-group-item").length - 1].innerHTML +=arr[i].price + "&#8377";
-    // $("img")[$("img").length - 1].setAttribute("src", arr[i].showImage);
+    $("img")[$("img").length - 1].setAttribute("src", arr[i].showImage);
   }
 }
 
@@ -29,9 +29,3 @@ bookMyShow = (e) => {
   
   location.assign("/html/bookMyShow.html");
 };
-
-
-  // let dataInLocalStorage = localStorage.getItem(bookingShowName.showName);
-  // dataInLocalStorage = dataInLocalStorage ? JSON.parse(dataInLocalStorage) : [];
-  // dataInLocalStorage.push(userDetails);
-  // localStorage.setItem(bookingShowName.showName, JSON.stringify(dataInLocalStorage)); 
