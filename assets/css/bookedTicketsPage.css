@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "lato", sans-serif;
+}
+
+body{
+  background-image: url(/assets/img/threater.png);
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.containerBox{
+  min-height: 100vh;
+  background-image: linear-gradient(#5ecde183,#2caee2cb);
+  padding: 10px;
+}
+
+.navbar a:first-child{
+  position: absolute;
+  top: 20px;
+  right: 6%;
+  padding: 10px 20px;
+  color: #555555;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  background:linear-gradient(45deg,#2caee2b7,#2caee283);
+  border-radius: 15px;
+  border:  1px solid #fff;
+  transition: .2s ease-in-out;
+}
+
+.navbar a:nth-child(2){
+  position: absolute;
+  top: 20px;
+  left: 6%;
+  padding: 10px 20px;
+  color: #555555;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  background:linear-gradient(45deg,#2caee2b7,#2caee283);
+  border-radius: 15px;
+  border:  1px solid #fff;
+  transition: .2s ease-in-out;
+}
+
+.navbar a:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.356);
+}
+
+h1:first-child{
+  margin-top: 70px;
+}

@@ -2,13 +2,35 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+  font-family: "lato", sans-serif;
+  color: #353232;
 }
 
 body{
   background-image: url(/assets/img/threater.png);
   background-size:cover;
   background-repeat: no-repeat;
+}
+
+.navbar a{
+  position: absolute;
+  top: 20px;
+  right: 6%;
+  padding: 10px 20px;
+  color: #555555;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  background:linear-gradient(45deg,#2caee2b7,#2caee283);
+  border-radius: 15px;
+  border:  1px solid #fff;
+  transition: .2s ease-in-out;
+}
+
+.navbar a:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.356);
 }
 
 .containerBox{

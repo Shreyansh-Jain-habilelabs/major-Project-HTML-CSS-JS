@@ -4,7 +4,7 @@ let arr = Object.keys(localStorage);
 arr.map((values) => {
   if (values != "showDetails" && values != "bookedShowDetails") {
     if (localStorage.getItem(values)) {
-      $(".tableContainer")[$(".tableContainer").length-1].innerHTML += '<div class="mx-auto my-3" style="width: 90%;"><h1 style="text-align: center;text-transform: uppercase;"></h1><table class="table table-striped table-hover"></table></div>';
+      $(".tableContainer")[$(".tableContainer").length-1].innerHTML += '<div class="mx-auto my-3" style="width: 90%;"><h1 style="text-align: center;text-transform: uppercase;"></h1><table class="table table-light table-hover"></table></div>';
       $("h1")[$("h1").length-1].innerText = values;
       let table = $("table")[$("table").length-1];
       let data = JSON.parse(localStorage.getItem(values));

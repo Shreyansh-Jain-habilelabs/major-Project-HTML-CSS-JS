@@ -26,12 +26,11 @@ bookMyShow = (e, values) => {
       dataInLocalStorage = dataInLocalStorage ? JSON.parse(dataInLocalStorage) : [];
       dataInLocalStorage.push(userDetails);
       localStorage.setItem(bookingShowName.showName, JSON.stringify(dataInLocalStorage));
+      location.assign("/index.html");
     }
   } else {
     alert("No field can be empty!");
   }
-
-  location.assign("/index.html");
 };
 
 // ----------------------------- Email Validation -----------------------------
