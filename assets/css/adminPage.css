@@ -97,8 +97,12 @@ input{
 label {
   color: #555555;
   position: absolute;
+  top: 0;
   left: 20px;
   font-size: 1.1rem;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: 250ms ease-in-out;
 }
 
 input:focus{
@@ -108,11 +112,12 @@ input:focus{
 
 .containerForm .inputBox input ~ label{
   transform:translate(7px,-18%);
-  color: #1d1d1d;
+  color: #555555a1;
   background-color: #ffffff;
   padding: 2px 5px;
   font-size: 15px;
 }
+
 
 input[type="submit"]{
   color: #555555;

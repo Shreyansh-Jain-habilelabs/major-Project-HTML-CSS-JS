@@ -2,7 +2,7 @@ if (JSON.parse(localStorage.getItem("showDetails"))) {
   let arr = JSON.parse(localStorage.getItem("showDetails")); 
   for (let i = 0; i < arr.length; i++) {
     $(".showCardContainer")[$(".showCardContainer").length - 1].innerHTML +=
-      '<div class="card" style="width: 18rem"><img src="" alt="" /><div class="card-body"><h5 class="card-title">Card title</h5><p class="card-text"></p><ul class="list-group list-group-flush"><li class="list-group-item"></li><li class="list-group-item"></li><li class="list-group-item"></li></ul><button onclick="bookMyShow(this)" class="btn btn-primary">Book Now</button></div></div>';
+      '<div class="card" style="width: 18rem"><div class="card-body"><h5 class="card-title">Card title</h5><p class="card-text"></p><ul class="list-group list-group-flush"><li class="list-group-item"></li><li class="list-group-item"></li><li class="list-group-item"></li></ul><button onclick="bookMyShow(this)" class="btn btn-primary">Book Now</button></div></div>';
     $(".card-title")[$(".card-title").length - 1].innerHTML = arr[i].name;
     $(".card-text")[$(".card-text").length - 1].innerHTML = arr[i].showDiscription;
     $(".list-group-item")[$(".list-group-item").length - 3].innerHTML += arr[i].date;

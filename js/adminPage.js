@@ -2,22 +2,23 @@ createShow = (e) => {
   e.preventDefault();
 
   let showDetails = {};
-  const imgData = {};
   for (let i = 0; i < e.target.length - 1; i++) {
     if (e.target[i].value) {
       showDetails[e.target[i].id] = e.target[i].value;
     }
     // if (e.target[i].type === "file") {
-    //   console.log(e.target[i]);
-    //   let file = e.target[i].files[0];
-    //   let reader = new FileReader();
-    //   reader.onloadend = () => {
-    //     console.log("RESULT", reader.result);
-    //     imgData[e.target[i].id] = reader.result;
-    //   };
-    //   reader.readAsDataURL(file);
+      
+    // //   console.log(e.target[i]);
+    // //   let file = e.target[i].files[0];
+    // //   let reader = new FileReader();
+    // //   reader.onloadend = () => {
+    // //     console.log("RESULT", reader.result);
+    // //     imgData[e.target[i].id] = reader.result;
+    // //   };
+    // //   reader.readAsDataURL(file);
     // }
   }
+  console.log(showDetails);
 
   if (
     "name" in showDetails &&
@@ -51,9 +52,18 @@ createShow = (e) => {
   } else {
     alert("No field can be empty!");
   }
-
-
 };
+// ----------------------------- Async await for image -----------------------------
+// async function getImageBlob(imageFiles){
+//   console.log(imageFiles);
+
+      
+      
+//   let imageAsBlob = reader.result;
+//   console.log(`reade.res : ${reader.result}`);
+//   console.log(`imageAsBlob : ${JSON.stringify(imageAsBlob)}`);
+//   return (JSON.stringify(imageAsBlob));
+// }
 
 // ----------------------------- Name Validation -----------------------------
 validateName = (nameEntered) => {
@@ -101,13 +111,13 @@ validateTime = (timeEntered) => {
 
 // ----------------------------- Image Validation -----------------------------
 validateImage = (imageUploaded) => {
-  let extension = imageUploaded.substring(imageUploaded.lastIndexOf(".") + 1).toLowerCase();
-  let validRegex = /(jpg)|(jpeg)|(png)/;
+//   let extension = imageUploaded.substring(imageUploaded.lastIndexOf(".") + 1).toLowerCase();
+//   let validRegex = /(jpg)|(jpeg)|(png)/;
 
-  if (!extension.match(validRegex)) {
-    alert("Invalid Time!");
-    return false;
-  }
+//   if (!extension.match(validRegex)) {
+//     alert("Invalid Time!");
+//     return false;
+//   }
   return true;
 };
 
