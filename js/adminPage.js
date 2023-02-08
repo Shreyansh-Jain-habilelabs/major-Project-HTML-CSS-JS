@@ -25,15 +25,13 @@ createShow = (e) => {
     "price" in showDetails &&
     "time" in showDetails &&
     "date" in showDetails &&
-    "showDiscription" in showDetails &&
-    "showImage" in showDetails
+    "showDiscription" in showDetails 
   ) {
     if (
       validateName(showDetails.name) &&
       validatePrice(showDetails.date) &&
       validateDate(showDetails.date) &&
-      validateTime(showDetails.time) &&
-      validateImage(showDetails.showImage)
+      validateTime(showDetails.time) 
     ) {
       if (checkExistingShow(showDetails.time, showDetails.date)) {
         alert("Time already contais a Show !");
@@ -120,17 +118,6 @@ validateImage = (imageUploaded) => {
 //   }
   return true;
 };
-
-// ----------------------------- Discription Validate -----------------------------
-// validateDiscription = (showDiscriptionEntered) => {
-//   let validRegex = /[A-Za-z ]/;
-
-//   if (!extension.match(validRegex)) {
-//     alert("Invalid Time!");
-//     return false;
-//   }
-//   return true;
-// };
 
 // ----------------------------- Check Existing Show Validate -----------------------------
 
